@@ -1,0 +1,64 @@
+$color-bg-search-result: #A1FFCE
+$color-bg-body: linear-gradient(to right, #4ecdc4, #556270)
+$font-size-input: 20px
+$default-padding: 10px
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding:0
+  font-size: 18px  
+
+body 
+  width: 100vw
+  height: 100vh
+  display: flex
+  flex-flow: column wrap
+  justify-content: center
+  align-items: center
+  background: $color-bg-body    
+
+.form-search
+  width: 95%
+  height: 700px
+  border-radius: 10px 50px 10px 10px
+
+  &__title
+    font-size: 1.5rem
+    text-align: center
+    margin-top: 20px
+
+  &__input--text
+    display: block
+    font-size: $font-size-input
+    margin: 10px auto
+    height: 40px
+    width: 90%  
+    padding: $default-padding
+    border-radius: 5px 10px 10px 5px
+
+  &__input--submit
+    display: block
+    font-size: $font-size-input
+    font-weight: bold
+    margin: 0 auto
+    height: 40px
+    width: 100px
+    border-radius: 10px
+    border: 1px solid rgba(39, 245, 161, 0.4)
+
+    &:active
+      border: 1px solid rgba(39, 245, 161, 1)
+      color: rgba(16, 245, 149, 0.79)
+    
+
+
+footer
+  position: absolute
+  bottom: 0
+  padding: 30px
+
+  a
+    text-decoration: none
+    letter-spacing: 1px
+    font-weight: bold
