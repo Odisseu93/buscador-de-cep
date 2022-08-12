@@ -4,10 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta
-   name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="favicon.svg"
-   type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="../src/css/style.css">
   <title>Busca CEP &#127968;</title>
 </head>
@@ -16,90 +14,43 @@
   <form class="form" id="form">
     <fieldset class="form__search">
       <h1 class="form__search__title">Buscador de Cep</h1>
-      <input
-        type="text"
-        id="searchField"
-        name="search"
-        class="form__search__input--text" 
-        placeholder="Digite o CEP aqui!"
-        pattern="^\d{5}(-\d{3})?$"
-        required>
-      <input
-        type="submit"
-        id="btnSubmitSearch"
-        name="submit"
-        class="form__search__input--submit" >
+      <input type="text" id="searchField" name="search" class="form__search__input--text"
+        placeholder="Digite o CEP aqui!" pattern="^\d{5}(-\d{3})?$" required>
+      <input type="submit" id="btnSubmitSearch" name="submit" class="form__search__input--submit">
     </fieldset>
     <fieldset class="form__result">
-      <label for="cep" class="form__result_lbl">cep</label>
-        <input
-          type="text" id="cep"
-          name="cep"
-          class="form__result_value cep"
-          readonly>
+      <label for="cep" class="form__result__lbl">cep</label>
+      <input type="text" id="cep" name="cep" value="teste" class="form__result__value cep" readonly>
 
-      <label for="logradouro" class="form__result_lbl">logradouro</label>
-        <input
-          type="text" id="logradouro"
-          name="logradouro"
-          class="form__result_value logradouro"
-          readonly>
+      <label for="logradouro" class="form__result__lbl">logradouro</label>
+      <input type="text" id="logradouro" name="logradouro" value="teste" class="form__result__value logradouro"
+        readonly>
 
-      <label for="complemento" class="form__result_lbl">complemento</label>
-        <input
-          type="text" id="complemento"
-          name="complemento"
-          class="form__result_value complemento"
-          readonly>
+      <label for="complemento" class="form__result__lbl">complemento</label>
+      <input type="text" id="complemento" name="complemento" value="teste" class="form__result__value complemento"
+        readonly>
 
-      <label for="bairro" class="form__result_lbl">bairro</label>
-        <input
-          type="text" id="bairro"
-          name="bairro"
-          class="form__result_value bairro"
-          readonly>
+      <label for="bairro" class="form__result__lbl">bairro</label>
+      <input type="text" id="bairro" name="bairro" value="teste" class="form__result__value bairro" readonly>
 
-      <label for="localidade" class="form__result_lbl">localidade</label>
-        <input
-          type="text" id="localidade"
-          name="localidade"
-          class="form__result_value localidade"
-          readonly>
+      <label for="localidade" class="form__result__lbl">localidade</label>
+      <input type="text" id="localidade" name="localidade" value="teste" class="form__result__value localidade"
+        readonly>
 
-      <label for="uf" class="form__result_lbl">uf</label>
-        <input
-          type="text" id="uf"
-          name="uf"
-          class="form__result_value uf"
-          readonly>
+      <label for="uf" class="form__result__lbl">uf</label>
+      <input type="text" id="uf" name="uf" value="teste" class="form__result__value uf" readonly>
 
-      <label for="ibge" class="form__result_lbl">ibge</label>
-        <input
-          type="number" id="ibge"
-          name="ibge"
-          class="form__result_value ibge"
-          readonly>
+      <label for="ibge" class="form__result__lbl">ibge</label>
+      <input type="number" id="ibge" name="ibge" value="99999" class="form__result__value ibge" readonly>
 
-      <label for="gia" class="form__result_lbl">gia</label>
-        <input
-          type="number" id="gia"
-          name="gia"
-          class="form__result_value gia"
-          readonly>
+      <label for="gia" class="form__result__lbl">gia</label>
+      <input type="number" id="gia" name="gia" value="99999" class="form__result__value gia" readonly>
 
-      <label for="ddd" class="form__result_lbl">ddd</label>
-        <input
-          type="number" id="ddd"
-          name="ddd"
-          class="form__result_value ddd"
-          readonly>
+      <label for="ddd" class="form__result__lbl">ddd</label>
+      <input type="number" id="ddd" name="ddd" value="99999" class="form__result__value ddd" readonly>
 
-      <label for="siafi" class="form__result_lbl">siafi</label>
-        <input
-          type="number" id="siafi"
-          name="siafi"
-          class="form__result_value siafi"
-          readonly>
+      <label for="siafi" class="form__result__lbl">siafi</label>
+      <input type="number" id="siafi" name="siafi" value="99999" class="form__result__value siafi" readonly>
     </fieldset>
   </form>
   <footer>Coded by <a href="https://github.com/Odisseu93" target="_blank">Ulisses Slvério</a>.</footer>
