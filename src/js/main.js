@@ -25,3 +25,16 @@ function update(result) {
 }
 
 
+form.clear.addEventListener('click', () => {
+  form.search.value= "";
+  form.cep.value = "";
+  form.logradouro.value = "";
+  form.complemento.value = "";
+  form.bairro.value = "";
+  form.localidade.value = "";
+  form.uf.value = "";
+  form.ibge.value = "";
+  form.gia.value = "";
+  form.ddd.value = "";
+  form.siafi.value = "";
+})
