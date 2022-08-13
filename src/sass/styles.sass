@@ -11,12 +11,13 @@ body
   width: 100vw
   height: 100vh
   background: variables.$color-bg-body    
-  border: 1px solid red
+  // border: 1px solid red
 
 .form
   width: 90%
-  height: 700px
-  margin: 0 auto
+  height: 600px
+  margin: 10px auto
+  // border: 1px solid purple
   padding: variables.$default-padding
 
   &__search
@@ -59,12 +60,13 @@ body
   
   &__result
     // display: none
-    height: 480px
+    height: 400px
     flex-flow: column wrap
     margin-top: 10px 
     padding: calc(variables.$default-padding * 1.5)
     border: none
-    overflow-x: hidden
+    // border: 1px solid green
+    overflow: auto
    
     &__lbl
       display: block
