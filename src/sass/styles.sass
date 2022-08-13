@@ -1,62 +1,107 @@
-$color-bg-search-result: #A1FFCE
-$color-bg-body: linear-gradient(to right, #4ecdc4, #556270)
-$font-size-input: 20px
-$default-padding: 10px
+@use 'variables'
+@use 'mixins'
 
 *
   box-sizing: border-box
   margin: 0
   padding:0
-  font-size: 18px  
+  font-size: 16px  
 
 body 
   width: 100vw
   height: 100vh
-  display: flex
-  flex-flow: column wrap
-  justify-content: center
-  align-items: center
-  background: $color-bg-body    
+  // display: flex
+  // flex-flow: column wrap
+  // justify-content: space-between
+  // align-items: center
+  background: variables.$color-bg-body    
+  border: 1px solid red
 
-.form-search
-  width: 95%
+.form
+  // display: flex
+  // flex-flow: column wrap
+  width: 90%
   height: 700px
-  border-radius: 10px 50px 10px 10px
+  margin: 0 auto
+  padding: variables.$default-padding
 
-  &__title
-    font-size: 1.5rem
-    text-align: center
-    margin-top: 20px
+  &__search
+    height: auto
+    padding: variables.$default-padding
+    border: none
 
-  &__input--text
-    display: block
-    font-size: $font-size-input
-    margin: 10px auto
-    height: 40px
-    width: 90%  
-    padding: $default-padding
-    border-radius: 5px 10px 10px 5px
+    &__title
+      font-size: 1.5rem
+      text-align: center
+      margin-top: 20px
 
-  &__input--submit
-    display: block
-    font-size: $font-size-input
-    font-weight: bold
-    margin: 0 auto
-    height: 40px
-    width: 100px
-    border-radius: 10px
-    border: 1px solid rgba(39, 245, 161, 0.4)
+    &__input--text
+      display: block
+      font-size: variables.$font-size-input
+      margin: 10px auto
+      height: 40px
+      width: 90%  
+      padding: variables.$default-padding
+      border-radius: 5px 10px 10px 5px
 
-    &:active
-      border: 1px solid rgba(39, 245, 161, 1)
-      color: rgba(16, 245, 149, 0.79)
-    
+      &::placeholder
+        text-align: center
+        font-size: variables.$font-size-input
+        color: variables.$placeholder-search-color
+
+    &__input--submit
+      display: block
+      font-size: variables.$font-size-input
+      font-weight: bold
+      margin: 0 auto
+      height: 40px
+      width: 100px
+      @include mixins.rounded-borders
+      border: 1px solid rgba(39, 245, 161, 0.4)
+
+      &:active
+        border: 1px solid rgba(39, 245, 161, 1)
+        color: rgba(16, 245, 149, 0.79)
+  
+  &__result
+    // display: none
+    height: 480px
+    flex-flow: column wrap
+    margin-top: 10px 
+    padding: calc(variables.$default-padding * 1.5)
+    border: none
+    overflow-x: hidden
+   
+    &__lbl
+      display: block
+      text-transform: uppercase
+      // padding: variables.$default-padding
+      color: variables.$label-result-color
+      font-weight: bold
+      // margin: 0 auto
+      text-align: center
+
+    &__value
+      display: block
+      font-size: variables.$font-size-input
+      color: variables.$result-value-color
+      text-align: center
+      margin: auto
+      width: 100%
+      border-radius: 5px 10px 10px 5px
+
+
 
 
 footer
+  // display: none
   position: absolute
+  right: 0
+  left: 0
   bottom: 0
-  padding: 30px
+  height: auto
+  margin-top: 10px 0 
+  text-align: center
 
   a
     text-decoration: none

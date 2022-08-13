@@ -2,41 +2,49 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
   background: linear-gradient(to right, #4ecdc4, #556270);
+  border: 1px solid red;
 }
 
-.form-search {
-  width: 95%;
+.form {
+  width: 90%;
   height: 700px;
-  border-radius: 10px 50px 10px 10px;
+  margin: 0 auto;
+  padding: 10px;
 }
-.form-search__title {
+.form__search {
+  height: auto;
+  padding: 10px;
+  border: none;
+}
+.form__search__title {
   font-size: 1.5rem;
   text-align: center;
   margin-top: 20px;
 }
-.form-search__input--text {
+.form__search__input--text {
   display: block;
-  font-size: 20px;
+  font-size: 18px;
   margin: 10px auto;
   height: 40px;
   width: 90%;
   padding: 10px;
   border-radius: 5px 10px 10px 5px;
 }
-.form-search__input--submit {
+.form__search__input--text::placeholder {
+  text-align: center;
+  font-size: 18px;
+  color: #CCC;
+}
+.form__search__input--submit {
   display: block;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   margin: 0 auto;
   height: 40px;
@@ -44,15 +52,43 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(39, 245, 161, 0.4);
 }
-.form-search__input--submit:active {
+.form__search__input--submit:active {
   border: 1px solid rgb(39, 245, 161);
   color: rgba(16, 245, 149, 0.79);
+}
+.form__result {
+  height: 480px;
+  flex-flow: column wrap;
+  margin-top: 10px;
+  padding: 15px;
+  border: none;
+  overflow-x: hidden;
+}
+.form__result__lbl {
+  display: block;
+  text-transform: uppercase;
+  color: #000036;
+  font-weight: bold;
+  text-align: center;
+}
+.form__result__value {
+  display: block;
+  font-size: 18px;
+  color: #00008b;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  border-radius: 5px 10px 10px 5px;
 }
 
 footer {
   position: absolute;
+  right: 0;
+  left: 0;
   bottom: 0;
-  padding: 30px;
+  height: auto;
+  margin-top: 10px 0;
+  text-align: center;
 }
 footer a {
   text-decoration: none;
