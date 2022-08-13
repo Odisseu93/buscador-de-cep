@@ -87,8 +87,8 @@ footer {
   left: 0;
   bottom: 0;
   height: auto;
-  margin-top: 10px 0;
   text-align: center;
+  padding: 10px;
 }
 footer a {
   text-decoration: none;
