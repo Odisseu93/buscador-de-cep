@@ -35,28 +35,36 @@ body
       font-size: variables.$font-size-input
       margin: 10px auto
       height: 40px
-      width: 90%  
+      width: 99%  
       padding: variables.$default-padding
-      border-radius: 5px 10px 10px 5px
+      @include mixins.rounded-borders()
 
       &::placeholder
         text-align: center
         font-size: variables.$font-size-input
         color: variables.$placeholder-search-color
 
-    &__input--submit
-      display: block
-      font-size: variables.$font-size-input
-      font-weight: bold
-      margin: 0 auto
-      height: 40px
-      width: 100px
-      @include mixins.rounded-borders
-      border: 1px solid rgba(39, 245, 161, 0.4)
+    &__btn
+      display: flex
+      justify-content: space-between
+      // border: 1px solid green
 
-      &:active
-        border: 1px solid rgba(39, 245, 161, 1)
-        color: rgba(16, 245, 149, 0.79)
+      &--submit , &--clear
+        display: block
+        font-size: variables.$font-size-input
+        font-weight: bold
+        margin: 0 auto
+        height: 40px
+        width: 100px
+        @include mixins.rounded-borders
+        border: 1px solid rgba(39, 245, 161, 0.4)
+       
+        &:active
+          border: 1px solid rgba(39, 245, 161, 1)
+          color: rgba(16, 245, 149, 0.79)
+        
+        
+
   
   &__result
     // display: none
@@ -67,7 +75,7 @@ body
     border: none
     // border: 1px solid green
     overflow: auto
-   
+
     &__lbl
       display: block
       text-transform: uppercase
@@ -82,7 +90,8 @@ body
       text-align: center
       margin: auto
       width: 100%
-      border-radius: 5px 10px 10px 5px
+      @include mixins.rounded-borders()
+      
 
 
 

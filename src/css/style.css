@@ -32,16 +32,20 @@ body {
   font-size: 18px;
   margin: 10px auto;
   height: 40px;
-  width: 90%;
+  width: 99%;
   padding: 10px;
-  border-radius: 5px 10px 10px 5px;
+  border-radius: 10px;
 }
 .form__search__input--text::placeholder {
   text-align: center;
   font-size: 18px;
   color: #CCC;
 }
-.form__search__input--submit {
+.form__search__btn {
+  display: flex;
+  justify-content: space-between;
+}
+.form__search__btn--submit, .form__search__btn--clear {
   display: block;
   font-size: 18px;
   font-weight: bold;
@@ -51,7 +55,7 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(39, 245, 161, 0.4);
 }
-.form__search__input--submit:active {
+.form__search__btn--submit:active, .form__search__btn--clear:active {
   border: 1px solid rgb(39, 245, 161);
   color: rgba(16, 245, 149, 0.79);
 }
@@ -77,7 +81,7 @@ body {
   text-align: center;
   margin: auto;
   width: 100%;
-  border-radius: 5px 10px 10px 5px;
+  border-radius: 10px;
 }
 
 footer {
