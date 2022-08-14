@@ -81,6 +81,7 @@ body {
   overflow: auto;
 }
 .form__result__lbl {
+  margin: 5px 0 3px 0;
   display: block;
   text-transform: uppercase;
   color: #000036;
