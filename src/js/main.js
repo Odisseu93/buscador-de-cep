@@ -1,15 +1,15 @@
 const form = document.querySelector('#form');
-
+const searchField = document.querySelector('#searchField');
 
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
   findPostalCode(form.search.value).then(function (result) {
-    if(result.erro) return alert("CEP inválido!")
+    if(result.erro) return alert("CEP inválido!");
     update(result)
-  })
+  });
 
-})
+});
 
 function update(result) {
   form.cep.value = result.cep
@@ -22,7 +22,7 @@ function update(result) {
   form.gia.value = result.gia
   form.ddd.value = result.ddd
   form.siafi.value = result.siafi
-}
+};
 
 
 form.clear.addEventListener('click', () => {
@@ -37,4 +37,5 @@ form.clear.addEventListener('click', () => {
   form.gia.value = "";
   form.ddd.value = "";
   form.siafi.value = "";
-})
+  form.search.focus();
+});
