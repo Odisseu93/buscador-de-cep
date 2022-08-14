@@ -8,10 +8,11 @@ form.addEventListener('submit', (e) => {
     if(result.erro) return alert("CEP inválido!");
     update(result)
   });
-
+  
 });
 
 function update(result) {
+  form.result.classList.add('is-visible');
   form.cep.value = result.cep
   form.logradouro.value = result.logradouro
   form.complemento.value = result.complemento
@@ -37,5 +38,6 @@ form.clear.addEventListener('click', () => {
   form.gia.value = "";
   form.ddd.value = "";
   form.siafi.value = "";
+  form.result.classList.remove('is-visible');
   form.search.focus();
 });
