@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
   font-size: 16px;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -20,14 +22,15 @@ body {
 .form__search {
   height: 25%;
   padding: 10px;
+  margin-top: 30px;
   border: none;
 }
 .form__search__title {
   font-size: 1.5rem;
   text-align: center;
   text-transform: uppercase;
-  word-spacing: 1rm;
-  letter-spacing: 10px;
+  word-spacing: 5px;
+  letter-spacing: 5px;
   margin-top: 20px;
   color: #304352;
 }
@@ -36,7 +39,7 @@ body {
   font-size: 18px;
   text-align: center;
   margin: 10px auto;
-  height: 40px;
+  height: 30px;
   width: 100%;
   padding: 10px;
   border-radius: 10px;
@@ -61,7 +64,7 @@ body {
 .form__search__btn--submit, .form__search__btn--clear {
   display: block;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   height: 40px;
   width: 100px;
   border-radius: 10px;
@@ -75,7 +78,7 @@ body {
   display: none;
   height: 68%;
   flex-flow: column wrap;
-  margin-top: 50px;
+  margin-top: 10px;
   padding: 15px;
   border: 1px solid rgba(39, 245, 161, 0.4);
   overflow: auto;
@@ -85,7 +88,8 @@ body {
   display: block;
   text-transform: uppercase;
   color: #000036;
-  font-weight: bold;
+  font-size: 18.9px;
+  font-weight: 700;
   text-align: center;
 }
 .form__result__value {
@@ -112,7 +116,7 @@ footer {
 footer a {
   text-decoration: none;
   letter-spacing: 1px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
