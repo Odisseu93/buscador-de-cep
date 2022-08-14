@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   font-size: 16px;
 }
 
@@ -12,27 +12,32 @@ body {
 }
 
 .form {
-  width: 90%;
-  height: 600px;
-  margin: 10px auto;
+  width: 98%;
+  height: 90vh;
+  margin: 20px auto;
   padding: 10px;
 }
 .form__search {
-  height: auto;
+  height: 25%;
   padding: 10px;
   border: none;
 }
 .form__search__title {
   font-size: 1.5rem;
   text-align: center;
+  text-transform: uppercase;
+  word-spacing: 1rm;
+  letter-spacing: 10px;
   margin-top: 20px;
+  color: #304352;
 }
 .form__search__input--text {
   display: block;
   font-size: 18px;
+  text-align: center;
   margin: 10px auto;
   height: 40px;
-  width: 99%;
+  width: 100%;
   padding: 10px;
   border-radius: 10px;
 }
@@ -41,15 +46,22 @@ body {
   font-size: 18px;
   color: #CCC;
 }
+.form__search__input--text:invalid {
+  color: coral;
+}
+.form__search__input--text:valid {
+  border: 1px solid rgb(39, 245, 161);
+  color: blue;
+}
 .form__search__btn {
   display: flex;
   justify-content: space-between;
+  padding: 0 5px;
 }
 .form__search__btn--submit, .form__search__btn--clear {
   display: block;
   font-size: 18px;
   font-weight: bold;
-  margin: 0 auto;
   height: 40px;
   width: 100px;
   border-radius: 10px;
@@ -60,11 +72,12 @@ body {
   color: rgba(16, 245, 149, 0.79);
 }
 .form__result {
-  height: 400px;
+  display: none;
+  height: 68%;
   flex-flow: column wrap;
-  margin-top: 10px;
+  margin-top: 50px;
   padding: 15px;
-  border: none;
+  border: 1px solid rgba(39, 245, 161, 0.4);
   overflow: auto;
 }
 .form__result__lbl {
@@ -84,8 +97,11 @@ body {
   border-radius: 10px;
 }
 
+.is-visible {
+  display: block;
+}
+
 footer {
-  display: none;
   position: absolute;
   right: 0;
   left: 0;
