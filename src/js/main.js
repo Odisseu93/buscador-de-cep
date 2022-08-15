@@ -1,11 +1,23 @@
 const form = document.querySelector('#form');
 const searchField = document.querySelector('#searchField');
+const viewError = document.querySelector('#viewError');
 
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
   findPostalCode(form.search.value).then(function (result) {
-    if(result.erro) return alert("CEP inválido!");
+    if(result.erro) {
+      viewError.classList.add('show-error');
+      setTimeout(()=>{
+        viewError.classList.remove('show-error');
+      },2000)
+      form.search.value= ""
+      form.search.placeholder = 'por favor, verifique o CEP.'  
+      setTimeout(()=>{
+        form.search.placeholder = 'Digite o CEP aqui!'  
+      },2000)  
+      return 
+    }
     update(result)
   });
   
