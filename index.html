@@ -13,11 +13,11 @@
 <body>
   <form class="form" id="form">
     <fieldset class="form__search">
-      <h1 class="form__search__title">Buscador de Cep</h1>
+      <label for="searchField"><h1 class="form__search__title">Buscador de Cep</h1></label>
       <input type="text" id="searchField" name="search" class="form__search__input--text"
         placeholder="Digite o CEP aqui!" pattern="[0-9]{5}-[\d]{3}" autofocus required>
       <div class="form__search__btn">
-        <input type="submit" id="btnSubmitSearch" name="submit" class="form__search__btn--submit">
+        <input type="submit" id="btnSubmitSearch" value="Enviar" name="submit" class="form__search__btn--submit">
         <button type="button" id="btnclear" name="clear" class="form__search__btn--clear">Limpar</button>
       </div>
     </fieldset>
