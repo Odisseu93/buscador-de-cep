@@ -54,7 +54,9 @@ form.clear.addEventListener('click', () => {
   form.search.focus();
 });
 
-/* adicionando um máscara no input */ 
-form.search.addEventListener('keypress', function() {
-  if(this.value.length === 5) return this.value = this.value + '-'
+/* adicionando um máscara no input */
+form.search.addEventListener('input', function () {
+  if (this.value.length === 5 && this.value.match('-') === null) return this.value = this.value + '-'; // adiciona a máscara durante a digitação
+  if (this.value.length >= 5 && this.value.match('-') === null) // adiciona a máscara quando o valor é trasferido para o input (Copy/Paste)
+    return this.value = this.value.slice(0, 5) + '-' + this.value.slice(5); 
 })
