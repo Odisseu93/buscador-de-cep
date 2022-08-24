@@ -53,3 +53,8 @@ form.clear.addEventListener('click', () => {
   form.result.classList.remove('is-visible');
   form.search.focus();
 });
+
+/* adicionando um máscara no input */ 
+form.search.addEventListener('keypress', function() {
+  if(this.value.length === 5) return this.value = this.value + '-'
+})
